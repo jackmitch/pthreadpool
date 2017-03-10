@@ -6,6 +6,7 @@ include_directories(include)
 add_library(pthreadpool src/pthreadpool.c)
 
 set_target_properties(pthreadpool PROPERTIES PUBLIC_HEADER "include/pthreadpool.h")
+target_compile_options(pthreadpool PUBLIC -fPIC)
 
 install(TARGETS pthreadpool
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
